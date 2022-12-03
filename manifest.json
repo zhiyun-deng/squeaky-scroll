@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Squeaky Scroll",
+  "version": "1.0",
+  "host_permissions": [
+    "*://*.facebook.com/"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.facebook.com/*"
+      ],
+      "js": [
+        "squeaky-scroll.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "squeak.mp3"
+      ],
+      "matches": [
+        "https://*.facebook.com/*"
+      ]
+    }
+  ]
+}
